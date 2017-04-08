@@ -8,7 +8,7 @@ export default function List(props) {
     cards.push(<Card text={props.cards[i]} />);
   }
    return (
-        <div className="list">
+        <div className="list" key="cards.id">
               {cards}
 		        <form onSubmit={props.onAddSubmit}>
   			       <label>
