@@ -5,10 +5,6 @@ export default function Card(props){
         <div className="card">
             	{props.text}
         </div>
-        );
-    };
-
-   Card.defaultProps = {
-   	text: ''
-   };
+        )
+    }
 

@@ -3,21 +3,17 @@ import React from 'react';
 import Card from './card';
 
 export default function List(props) {
-  const cards = [];
-  for (let i=0; i < props.cards.length; i++){
-    cards.push(<Card text={props.cards[i]} />);
-  }
    return (
-        <div className="list" key="cards.id">
-              {cards}
-		        <form onSubmit={props.onAddSubmit}>
-  			       <label>
-    			         Name: 
-    			       <input type="text" id="writings" onChange={props.onAddInputChanged} />
-  			       </label>
-  			         <input type="submit" value="Submit" />
-		        </form>
+        <div className='card-list'>
+          <h3 className='list-title'>{props.title}</h3>
+          <section className='list-cards'>
+            {props.cards.map((card, index) => <Card text={card} key={index} />)}
+          </section>
+          <form>
+            <label htmlFor={`newCard_${props.index}`}>New card Text</label>
+            <input id={`newCard_${props.index}`} name="cardText" onChange={props.onAddInputChanged} />
+            <button type="submit" onClick={props.onAddSubmit}> Submit Card </button>
+          </form>
         </div>
-      );
-  }
-
+      )
+    }
