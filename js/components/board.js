@@ -13,7 +13,7 @@ export default class Board extends React.Component{
     return (
       <div className='card-board'>
         <h2 className='board-title'>{this.state.title}</h2>
-          {this.state.lists.map( (title, index) => <ListContainer title={title} key={index} index={index} /> )}
+          {this.state.lists.map((title, index) => <ListContainer title={title} key={index} index={index} /> )}
       </div>
     )
   }

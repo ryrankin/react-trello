@@ -13,7 +13,7 @@ describe('Board component', function() {
     renderer.render(<Board />);
     const result = renderer.getRenderOutput();
 
-    result.type.should.equal('div')
+    result.type.should.equal('div');
     result.props.className.should.equal('card-board');
 
     const h2 = result.props.children;
