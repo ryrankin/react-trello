@@ -5,7 +5,7 @@ export default class Board extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      lists: ['Most Important ', 'Wishful Thinking', 'When Pigs Fly'],
+      lists: ['Most Important ', 'To Do', 'Least Important'],
       title: this.props.title
     };
   }
