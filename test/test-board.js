@@ -17,8 +17,8 @@ describe('Board component', function() {
     result.props.className.should.equal('card-board');
 
     const h2 = result.props.children;
-    h2.type.should.equal('div');
-    h2.props.className.should.equal('board-title');
+    h2[0].type.should.equal('h2');
+    h2[0].props.className.should.equal('board-title');
 
   });
 });
